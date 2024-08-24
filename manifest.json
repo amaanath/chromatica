@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Chromatica",
+    "version": "1.0",
+    "description": "Apply a black and white filter to websites for digital wellness",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon.png"
+      }
+    },
+    "icons": {
+      "48": "icon.png"
+    }
+  }
